@@ -81,9 +81,8 @@ export default function Portfolio() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className={`text-sm transition-colors hover:text-primary ${
-                  activeSection === item.toLowerCase() ? "text-primary font-medium" : "text-muted-foreground"
-                }`}
+                className={`text-sm transition-colors hover:text-primary ${activeSection === item.toLowerCase() ? "text-primary font-medium" : "text-muted-foreground"
+                  }`}
               >
                 {item}
               </motion.button>
@@ -118,10 +117,10 @@ export default function Portfolio() {
                 Shatrughn Vishwakarma
               </h1>
               <p className="mt-6 text-2xl text-muted-foreground font-light">
-                Senior Frontend Engineer & Angular Specialist
+                Senior Frontend Engineer & Full-Stack Developer
               </p>
               <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                8 years architecting scalable web applications with expertise in Angular, React, and Next.js
+                8 years architecting scalable web applications: 5 years with Angular, 4 years with Next.js & React, plus Node.js API development
               </p>
             </motion.div>
 
@@ -135,7 +134,7 @@ export default function Portfolio() {
                 Get in touch
               </Button>
               <Button variant="outline" size="lg" className="px-8" asChild>
-                <a href="#" download>
+                <a href="/resume-shatrughn-vishwakarma.pdf" download>
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume
                 </a>
@@ -150,10 +149,10 @@ export default function Portfolio() {
               className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto"
             >
               {[
-                { value: "8", label: "Years Experience" },
+                { value: "8", label: "Years Total" },
+                { value: "5", label: "Angular Years" },
+                { value: "4", label: "React/Next.js Years" },
                 { value: "40+", label: "Projects Delivered" },
-                { value: "35%", label: "Avg. Performance Gain" },
-                { value: "20%", label: "Cost Reduction" },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -202,10 +201,10 @@ export default function Portfolio() {
                 <h2 className="text-3xl font-bold tracking-tight">Crafting Digital Excellence</h2>
               </div>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Hello! I'm Shatrughn Vishwakarma, a passionate <strong>Senior Frontend Engineer & Angular Specialist</strong> with over 7 years of experience building enterprise-grade applications for Mobile, Tablet, and Desktop platforms.
+                Hello! I'm Shatrughn Vishwakarma, a passionate <strong>Senior Frontend Engineer & Full-Stack Developer</strong> with <strong>8 years</strong> of experience building enterprise-grade applications for Mobile, Tablet, and Desktop platforms.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I specialize in transforming complex business requirements into elegant, high-performance single page applications using modern JavaScript/TypeScript ecosystems. My expertise spans across Angular, React, and Next.js, with deep knowledge of state management, performance optimization, and cloud deployment.
+                I specialize in transforming complex business requirements into elegant, high-performance applications using modern JavaScript/TypeScript ecosystems. My expertise includes <strong>5 years of Angular development</strong>, <strong>4 years of React & Next.js</strong>, and <strong>basic Node.js API development</strong>. I have deep knowledge of state management, performance optimization, cloud deployment, and full-stack development practices.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 I've successfully delivered <strong>40+ projects</strong>, achieving an average of <strong>35% performance improvement</strong> and <strong>20% cost reduction</strong> through strategic optimizations and modern development practices.
@@ -265,16 +264,22 @@ export default function Portfolio() {
                   delay={0.1}
                 />
                 <ExpertiseItem
-                  title="Angular Development"
+                  title="Angular Development (5 Years)"
                   description="Building robust enterprise SPAs with Angular 12+, TypeScript, RxJS, and comprehensive testing."
                   icon={<Zap className="h-5 w-5" />}
                   delay={0.2}
                 />
                 <ExpertiseItem
-                  title="React & Next.js"
-                  description="Developing high-performance applications with React 18+, Next.js 14, and modern React patterns."
+                  title="React & Next.js (4 Years)"
+                  description="Developing high-performance applications with React 18+, Next.js 14, SSR, and modern React patterns."
                   icon={<TrendingUp className="h-5 w-5" />}
                   delay={0.3}
+                />
+                <ExpertiseItem
+                  title="Node.js API Development (Basic)"
+                  description="Building RESTful APIs and backend services with Node.js, Express, and database integration."
+                  icon={<Code className="h-5 w-5" />}
+                  delay={0.35}
                 />
                 <ExpertiseItem
                   title="Performance Optimization"
@@ -310,7 +315,7 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
               <SkillCategory
                 title="Core Technologies"
                 skills={[
@@ -322,14 +327,24 @@ export default function Portfolio() {
                 delay={0}
               />
               <SkillCategory
-                title="Frameworks & Libraries"
+                title="Frontend Frameworks (9 Years Combined)"
                 skills={[
-                  { name: "Angular 12+", level: 95 },
-                  { name: "React.js 18+", level: 88 },
-                  { name: "Next.js 14", level: 85 },
-                  { name: "RxJS", level: 87 },
+                  { name: "Angular 12+, RxJS (5 Years)", level: 95 },
+                  { name: "React.js 18+ (4 Years)", level: 90 },
+                  { name: "Next.js 14 (4 Years)", level: 88 },
+                  { name: "Redux & Redux Toolkit", level: 85 },
+                  { name: "NgRx", level: 80 },
                 ]}
                 delay={0.2}
+              />
+              <SkillCategory
+                title="Backend & Full-Stack"
+                skills={[
+                  { name: "Node.js (Basics)", level: 65 },
+                  { name: "Express.js (Basics)", level: 60 },
+                  { name: "REST APIs", level: 92 },
+                ]}
+                delay={0.3}
               />
               <SkillCategory
                 title="UI & Styling"
@@ -348,12 +363,15 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
               viewport={{ once: true }}
-              className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4"
+              className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4"
             >
               {[
-                "PrimeNG", "AWS EC2", "AWS S3", "Docker", "REST APIs", "GraphQL",
-                "Git & GitHub", "Jest", "Cypress", "Webpack", "Vite", "Nginx",
-                "Responsive Design", "PWA", "SEO", "Agile/Scrum", "JIRA", "Figma"
+                "PrimeNG", "AWS EC2",
+                "AWS S3", "Docker",
+                "REST APIs", "Node.js",
+                "Express.js", "Jest",
+                "Responsive Design", "PWA",
+                "SEO", "Agile/Scrum"
               ].map((skill, index) => (
                 <motion.div
                   key={skill}
@@ -516,7 +534,7 @@ export default function Portfolio() {
 
               <div className="pt-6">
                 <Button variant="outline" asChild className="w-full" size="lg">
-                  <a href="#" download>
+                  <a href="/resume-shatrughn-vishwakarma.pdf" download>
                     <Download className="mr-2 h-4 w-4" />
                     Download Resume
                   </a>
@@ -536,7 +554,7 @@ export default function Portfolio() {
             </div>
             <span className="text-muted-foreground">•</span>
             <p className="text-sm text-muted-foreground">
-              Senior Frontend Engineer & Angular Specialist
+              Senior Frontend Engineer & Full-Stack Developer
             </p>
           </div>
           <div className="flex items-center gap-6">
@@ -570,10 +588,10 @@ function EnhancedExperienceSection() {
         >
           <Badge variant="outline" className="mb-4">Career Journey</Badge>
           <h2 className="text-4xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
-            Professional Experience
+            Professional Experience (8 Years Total)
           </h2>
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-lg">
-            My evolution from frontend intern to senior developer, delivering measurable impact at every stage
+            5 years Angular expertise + 4 years React/Next.js specialization + Node.js fundamentals
           </p>
         </motion.div>
 
@@ -581,7 +599,7 @@ function EnhancedExperienceSection() {
         <div className="relative max-w-6xl mx-auto">
           {/* Vertical Progress Line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-primary/50 to-primary/20 rounded-full hidden lg:block"></div>
-          
+
           {enhancedCareerStages.map((stage, index) => (
             <motion.div
               key={stage.role}
@@ -589,13 +607,12 @@ function EnhancedExperienceSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={`relative flex flex-col lg:flex-row items-center gap-8 mb-16 last:mb-0 ${
-                index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
-              }`}
+              className={`relative flex flex-col lg:flex-row items-center gap-8 mb-16 last:mb-0 ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                }`}
             >
               {/* Timeline Dot */}
               <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-primary border-4 border-background z-10 hidden lg:block"></div>
-              
+
               {/* Content Card */}
               <div className={`flex-1 ${index % 2 === 0 ? "lg:pr-12" : "lg:pl-12"}`}>
                 <motion.div
@@ -875,9 +892,9 @@ function ContactForm() {
           className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 resize-none transition-colors"
         />
       </div>
-      <Button 
-        type="submit" 
-        className="w-full py-3 text-base" 
+      <Button
+        type="submit"
+        className="w-full py-3 text-base"
         disabled={isSubmitting}
       >
         {isSubmitting ? (
@@ -1008,66 +1025,71 @@ const projects: Project[] = [
 
 const enhancedCareerStages: EnhancedCareerStage[] = [
   {
-    role: "Next.js Developer",
+    role: "Senior Full-Stack Developer",
     company: "Beaminnovate Pvt. Ltd.",
     period: "2023 - Present",
-    technologies: ["Next.js 14", "React 18", "TypeScript", "Tailwind CSS", "shadcn/ui", "AWS"],
+    technologies: ["Next.js 14", "React 18", "TypeScript", "Tailwind CSS", "shadcn/ui", "Node.js", "Express", "AWS"],
     achievements: [
+      "Architected and deployed full-stack applications using Next.js and Node.js",
       "Migrated legacy Angular applications to Next.js, improving performance by 50%",
-      "Implemented server-side rendering for better SEO and initial load times",
-      "Led adoption of modern React patterns and best practices across teams"
+      "Implemented server-side rendering and API routes for enhanced SEO and performance",
+      "Built RESTful APIs with Node.js/Express for multiple client applications"
     ],
     metrics: [
       { value: "50%", description: "Performance improvement" },
-      { value: "8+", description: "Projects delivered" }
+      { value: "8+", description: "Full-stack projects" }
     ],
     responsibilities: [
-      "Architected and developed modern web applications using Next.js and React",
-      "Implemented server-side rendering and static site generation strategies",
-      "Optimized application performance, reducing bundle size by 40%",
-      "Mentored team members on modern React patterns and TypeScript best practices"
+      "Architected full-stack solutions using Next.js and Node.js",
+      "Implemented server-side rendering and static generation strategies",
+      "Developed RESTful APIs with Node.js and Express",
+      "Optimized application performance and deployed on AWS"
     ]
   },
   {
-    role: "Angular Developer",
+    role: "React & Next.js Developer",
     company: "Beaminnovate Pvt. Ltd.",
-    period: "2021 - 2023",
-    technologies: ["Angular 12+", "TypeScript", "RxJS", "Angular Material", "PrimeNG", "Bootstrap"],
+    period: "2021 - 2023 (4 Years Combined: React/Next.js)",
+    technologies: ["React 18", "Next.js 14", "TypeScript", "Tailwind CSS", "shadcn/ui", "Redux", "AWS"],
     achievements: [
-      "Built 8+ enterprise SPAs for eCommerce and ERP systems",
-      "Reduced load times by 35% through code-splitting and lazy loading",
-      "Modernized legacy UIs with component-based architecture"
+      "Developed 8+ modern web applications using React and Next.js",
+      "Implemented advanced React patterns and hooks for scalable architectures",
+      "Reduced bundle sizes by 40% through code-splitting and lazy loading optimization",
+      "Led adoption of Next.js across multiple projects for improved performance"
+    ],
+    metrics: [
+      { value: "40%", description: "Bundle size reduction" },
+      { value: "8+", description: "React/Next.js projects" }
+    ],
+    responsibilities: [
+      "Developed scalable React applications with modern patterns",
+      "Implemented Next.js for server-side rendering and static generation",
+      "Optimized performance through code-splitting and lazy loading",
+      "Collaborated with UI/UX teams for pixel-perfect implementations"
+    ]
+  },
+  {
+    role: "Angular Specialist (5 Years Experience)",
+    company: "Beaminnovate Pvt. Ltd.",
+    period: "2017 - 2021 (5 Years Angular Focus)",
+    technologies: ["Angular 12+", "TypeScript", "RxJS", "Angular Material", "PrimeNG", "Bootstrap", "NgRx"],
+    achievements: [
+      "Built 15+ enterprise SPAs using Angular for eCommerce and ERP systems",
+      "Reduced load times by 35% through code-splitting, lazy loading, and tree-shaking",
+      "Modernized legacy UIs with component-based architecture and Angular Material",
+      "Implemented state management with NgRx for complex data flows",
+      "Mentored 4 junior developers in Angular best practices"
     ],
     metrics: [
       { value: "35%", description: "Load time reduction" },
-      { value: "8", description: "SPAs delivered" }
+      { value: "15+", description: "SPAs delivered" }
     ],
     responsibilities: [
-      "Developed complex single-page applications using Angular and TypeScript",
-      "Implemented state management solutions and reactive programming with RxJS",
+      "Architected and developed complex single-page applications with Angular",
+      "Implemented reactive programming patterns using RxJS",
       "Created reusable component libraries with Angular Material and PrimeNG",
-      "Optimized application performance and bundle sizes through advanced techniques"
-    ]
-  },
-  {
-    role: "Sr. Frontend Developer",
-    company: "Beaminnovate Pvt. Ltd.",
-    period: "2019 - 2021",
-    technologies: ["Angular", "React", "JavaScript", "Bootstrap", "jQuery", "REST APIs"],
-    achievements: [
-      "Led frontend development for 12+ projects across different domains",
-      "Mentored 4 junior developers, improving team productivity by 15%",
-      "Established coding standards and best practices across teams"
-    ],
-    metrics: [
-      { value: "15%", description: "Team productivity gain" },
-      { value: "12+", description: "Projects led" }
-    ],
-    responsibilities: [
-      "Led frontend development initiatives and architectural decisions",
-      "Mentored junior developers and conducted code reviews",
-      "Implemented complex UI/UX designs with pixel-perfect accuracy",
-      "Optimized website performance and accessibility standards"
+      "Optimized performance through tree-shaking and lazy loading",
+      "Established coding standards and mentored junior developers"
     ]
   },
   {
@@ -1076,19 +1098,20 @@ const enhancedCareerStages: EnhancedCareerStage[] = [
     period: "2017 - 2019",
     technologies: ["HTML5", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Responsive Design"],
     achievements: [
-      "Developed 20+ responsive websites for various clients",
-      "Implemented mobile-first designs improving mobile conversion rates",
-      "Reduced development time by 25% through component reuse"
+      "Developed 20+ responsive websites and web applications",
+      "Implemented mobile-first designs improving mobile conversion rates by 30%",
+      "Reduced development time by 25% through component reuse and best practices",
+      "Ensured cross-browser compatibility and accessibility compliance"
     ],
     metrics: [
-      { value: "20+", description: "Websites delivered" },
+      { value: "20+", description: "Projects delivered" },
       { value: "25%", description: "Development time saved" }
     ],
     responsibilities: [
       "Developed responsive websites using HTML, CSS, and JavaScript",
       "Implemented interactive features with jQuery and vanilla JavaScript",
       "Collaborated with backend developers for API integration",
-      "Ensured cross-browser compatibility and responsive design"
+      "Ensured cross-browser compatibility and web accessibility standards"
     ]
   }
 ]
